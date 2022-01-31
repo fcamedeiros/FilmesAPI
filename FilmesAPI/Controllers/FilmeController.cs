@@ -17,5 +17,11 @@ namespace FilmesAPI.Controllers
             filme.Id = id++;
             filmes.Add(filme);
         }
+
+        [HttpGet]
+        public IEnumerable<Filme> RecuperaFilmes()
+        {
+            return filmes;
+        }
     }
 }
