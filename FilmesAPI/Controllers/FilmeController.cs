@@ -31,15 +31,52 @@ namespace FilmesAPI.Controllers
             return _context.Filmes;
         }
 
+        private Filme GetFilme(int id)
+        {
+            return _context.Filmes.FirstOrDefault(filme => filme.Id == id);
+        }
+
         [HttpGet("{id}")]
         public IActionResult RecuperaFilmePorId(int id)
         {
-            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
+            Filme filme = GetFilme(id);
 
             if (filme == null)
                 return NotFound();
 
             return Ok(filme);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizaFilme(int id, [FromBody] Filme filmeNovo)
+        {
+            Filme filme = GetFilme(id);
+
+            if (filme == null)
+                return NotFound();
+
+            filme.Titulo = filmeNovo.Titulo;
+            filme.Genero = filmeNovo.Genero;
+            filme.Diretor = filmeNovo.Diretor;
+            filme.Duracao = filmeNovo.Duracao;
+
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletaFilme(int id)
+        {
+            Filme filme = GetFilme(id);
+
+            if (filme == null)
+                return NotFound();
+
+            _context.Remove(filme);
+            _context.SaveChanges();
+
+            return NoContent();
         }
     }
 }
