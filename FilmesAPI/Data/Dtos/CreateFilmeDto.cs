@@ -2,6 +2,9 @@
 
 namespace FilmesAPI.Data.Dtos
 {
+    /// <summary>
+    /// DTO utilizado na criação de um filme
+    /// </summary>
     public class CreateFilmeDto
     {
         [Required(ErrorMessage = "O campo título é obrigatório!")]

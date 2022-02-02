@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FilmesAPI.Data.Dtos
 {
+    /// <summary>
+    /// DTO utilizado na consulta de um filme
+    /// </summary>
     public class ReadFilmeDto
     {
         [Key]

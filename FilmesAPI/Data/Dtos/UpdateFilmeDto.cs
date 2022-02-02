@@ -2,6 +2,9 @@
 
 namespace FilmesAPI.Data.Dtos
 {
+    /// <summary>
+    /// DTO utilizado na atualização dos dados de um filme
+    /// </summary>
     public class UpdateFilmeDto
     {
         [Required(ErrorMessage = "O campo título é obrigatório!")]
