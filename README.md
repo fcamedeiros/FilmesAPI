@@ -40,6 +40,8 @@ POST /Filme
 400: Bad Request
 ```
 
+![post](https://user-images.githubusercontent.com/35452578/152438329-26629591-4c92-4012-825f-5b03357005ad.gif)
+
 ## Busca
 Recupera a lista de filmes presentes no Banco de Dados
 
@@ -66,6 +68,11 @@ GET /Filme
 200: Ok
 ```
 
+![get_vazio](https://user-images.githubusercontent.com/35452578/152438504-6f4463cd-752f-4a8c-86a0-548886904a2e.gif)
+
+![get](https://user-images.githubusercontent.com/35452578/152438520-1867c519-8e7d-47e8-a2ed-0c2147def208.gif)
+
+
 ## Busca pelo Id
 Recupera um filme pelo seu identificador
 
@@ -90,6 +97,10 @@ GET /Filme/{id}
 200: Ok
 404: Not Found
 ```
+
+![getid_vazio](https://user-images.githubusercontent.com/35452578/152438628-4911d799-e126-4f95-ab2c-8a5ddfef40c7.gif)
+
+![getid](https://user-images.githubusercontent.com/35452578/152438644-8d940981-4879-48d1-845f-2f9c418f20af.gif)
 
 ## Atualização
 Atualiza os dados de um filme cadastrado
@@ -119,6 +130,10 @@ PUT /Filme/{id}
 404: Not Found
 ```
 
+![putnot](https://user-images.githubusercontent.com/35452578/152438819-46538371-5483-4ac8-b86d-09691766e47d.gif)
+
+![putok](https://user-images.githubusercontent.com/35452578/152438829-cf9cb023-1e8e-428e-9dd3-a653f6430767.gif)
+
 ## Deleção
 Elimina um filme cadastrado
 
@@ -136,3 +151,7 @@ DELETE /Filme/{id}
 204: No Content
 404: Not Found
 ```
+
+![deletenot](https://user-images.githubusercontent.com/35452578/152438867-4cd4bcdf-179e-4d88-9a08-8943fb6e1ab0.gif)
+
+![deleteok](https://user-images.githubusercontent.com/35452578/152438877-c26a3211-31ee-4b19-b816-8078881d853b.gif)
